@@ -2,9 +2,16 @@
 [arXiv]() | [paper]() | [poster]()\
 This repository is the official implementation of SITP.
 SITP is a novel predictor capable of outputting trajectory prediction results and strategies
-![AnoverviewofSITP](assets/predDEMO.gif)
+
+<div style="text-align:center;">
+<img src="assets/predDEMO.gif" alt="AnoverviewofSITP" style="width:50%;">
+</div>
+
 Furthermore, sitp can assist downstream planning for autonomous vehicles.
-![AnoverviewofSITP](assets/planDEMO.gif)
+
+<div style="text-align:center;">
+<img src="assets/planDEMO.gif" alt="AnoverviewofSITP" style="width:50%;">
+</div>
 
 ## Table of Contents
 + [Setup](#setup)
@@ -22,7 +29,7 @@ git clone https://github.com/salt0107fish/sitp.git
 cd sitp
 conda create -n sitp python=3.7
 conda activate sitp
-pip install -t requirement.txt
+pip install -r requirement.txt
 ```
 *Note:* For compatibility, you may experiment with different pytorch versions. We use PyTorch 1.12.1 with cu113.
 
@@ -59,7 +66,7 @@ Data preprocessing may take several hours the first time you run this project. W
 ```
 
 # For INTERACTION
-python HPNet-INTERACTION/val.py --dataset-path /path/to/your/dir/ --models-path /path/to/your/model.pth
+python evaluate.py --dataset-path /path/to/your/dataset/ --models-path /path/to/your/model.pth
 ```
 
 ## Pre-trained Models
