@@ -1,5 +1,5 @@
 # Strategy-Interactive Trajectory Prediction: Towards Effective Interaction Modeling and Planning Integration
-[arXiv]() | [paper]() | [poster]()\
+[arXiv]() | [paper]() | [website]()\
 This repository is the official implementation of SITP.
 SITP is a novel predictor capable of outputting trajectory prediction results and strategies
 
@@ -71,9 +71,15 @@ python evaluate.py --dataset-path /path/to/your/dataset/ --models-path /path/to/
 
 ## Pre-trained Models
 
-
 ### INTERACTION
-- **Pre-trained model:** [Download here](https://drive.google.com/drive/folders/1g--HQxRF8VNl3f6WRguAq5uaUZV1eCfu?usp=drive_link)
+- **Pre-trained model:** [Download here](https://drive.google.com/file/d/1sQdil7ghuFaLIGEuhIJeN4e5KdTvPIlE/view?usp=drive_link)
+
+- **Validation results:**
+---
+| Method | minADE6| minFDE6 |
+|----------|----------|----------|
+| SITP | 0.1394 | 0.4071|
+---
 
 ## Planning Scenarios
 
@@ -87,14 +93,12 @@ python evaluate.py --dataset-path /path/to/your/dataset/ --models-path /path/to/
 
 - [x] Introduction & DEMO
 - [x] Hand-crafted scenario
-- [] Pretrained model
-- [] Validation scripts
-- [] Data pre-process
-- [] Training scripts
+- [x] Pretrained model
+- [ ] Validation scripts
+- [ ] Data pre-process
+- [ ] Training scripts
 
 
 ## Acknowledgements
-We sincerely appreciate [Sind](https://github.com/SOTIF-AVLab/SinD), [INTERACTION](https://github.com/interaction-dataset/interaction-dataset),[Autobot](https://github.com/roggirg/AutoBots) and [DEMO](https://github.com/fudan-zvg/DeMo) for their awesome codebases.
-
 
 ## Citation
