@@ -35,10 +35,6 @@ pip install -r requirement.txt
 
 ## Datasets
 
-<details>
-<summary><b>INTERACTION</b></summary>
-<p>
-
 1. Download the [INTERACTION Dataset v1.2](https://interaction-dataset.com/). Here, we only need the data for the multi-agent tracks. After downloading and extracting the zip files, organize the dataset directory as follows:
 
 ```
@@ -55,8 +51,11 @@ pip install -r requirement.txt
 
 ```
 
-</p>
-</details>
+2. Preprocess
+```
+cd datasets
+python preprocess.py
+```
 
 
 ## Validation
@@ -81,14 +80,13 @@ Results in validation set:
 |----------|----------|----------|
 | SITP | 0.1394 | 0.4071|
 
-### SIND
 
 ## Planning Scenarios
 
 300 scenarios we made are used. The starting and goal points of the planning tasks are manually imported and configured, and the scenarios comply with the official [CommonRoad](https://commonroad.in.tum.de/) format. Each scenario includes a complete driving task, incorporating map information, traffic participants, and traffic signal data imported from the real-world driving dataset [SinD](https://github.com/SOTIF-AVLab/SinD). A small planning benchmark for these scenarios is also released in the paper.
 
 <div style="text-align:center;">
-<img src="assets/scenario_information.png" alt="AnoverviewofSITP" style="width:90%;">
+<img src="assets/scenario_information.png" alt="AnoverviewofSITP" style="width:100%;">
 </div>
 
 - **Hand-crafted scenarios:** [Download here](https://drive.google.com/drive/folders/1g--HQxRF8VNl3f6WRguAq5uaUZV1eCfu?usp=drive_link)
@@ -108,7 +106,7 @@ Results in validation set:
 - [x] Hand-crafted scenario
 - [x] Pretrained model
 - [x] Validation scripts
-- [ ] Data pre-process
+- [x] Data pre-process
 - [ ] Training scripts
 
 
