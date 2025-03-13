@@ -64,7 +64,7 @@ class MapEncoderPtsMA(nn.Module):
         P = roads.shape[3]
         road_segment_mask, road_pts_mask = self.get_road_pts_mask(roads)
         road_pts_feats = self.road_pts_lin(roads[:, :, :, :, :self.map_attr]).view(B*M*S, P, -1).permute(1, 0, 2)
-.
+
         map_seeds = self.map_seeds.repeat(1, B * M * S, 1)
         road_seg_emb = self.road_pts_attn_layer(query=map_seeds, key=road_pts_feats, value=road_pts_feats,
                                                 key_padding_mask=road_pts_mask)[0]

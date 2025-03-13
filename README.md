@@ -4,13 +4,13 @@ This repository is the official implementation of SITP.
 SITP is a novel predictor capable of outputting trajectory prediction results and strategies
 
 <div style="text-align:center;">
-<img src="assets/predDEMO.gif" alt="AnoverviewofSITP" style="width:50%;">
+<img src="assets/predDEMO.gif" alt="AnoverviewofSITP" style="width:70%;">
 </div>
 
 Furthermore, sitp can assist downstream planning for autonomous vehicles.
 
 <div style="text-align:center;">
-<img src="assets/planDEMO.gif" alt="AnoverviewofSITP" style="width:50%;">
+<img src="assets/planDEMO.gif" alt="AnoverviewofSITP" style="width:70%;">
 </div>
 
 ## Table of Contents
@@ -61,7 +61,7 @@ pip install -r requirement.txt
 
 ## Validation
 
-Data preprocessing may take several hours the first time you run this project. We use single RTX 3060 GPU, one epoch takes about 12 minutes INTERACTION.
+Data preprocessing may take several hours the first time you run this project. We use single RTX 3060 GPU, one epoch takes about 12 minutes in INTERACTION.
 
 ```
 
@@ -71,21 +71,34 @@ python evaluate.py --dataset-path /path/to/your/dataset/ --models-path /path/to/
 
 ## Pre-trained Models
 
-### INTERACTION
-- **Pre-trained model:** [Download here](https://drive.google.com/file/d/1sQdil7ghuFaLIGEuhIJeN4e5KdTvPIlE/view?usp=drive_link)
+- **Pre-trained model:** You can download the pretrained model for INTERACTION. [Download here](https://drive.google.com/file/d/1sQdil7ghuFaLIGEuhIJeN4e5KdTvPIlE/view?usp=drive_link)
 
 - **Validation results:**
----
+
+Results in validation set:
+
 | Method | minADE6| minFDE6 |
 |----------|----------|----------|
 | SITP | 0.1394 | 0.4071|
----
+
+### SIND
 
 ## Planning Scenarios
 
-300 scenarios are used. The starting and ending points of the planning tasks are manually imported and configured, and the scenarios comply with the official [CommonRoad](https://commonroad.in.tum.de/) format.
+300 scenarios we made are used. The starting and goal points of the planning tasks are manually imported and configured, and the scenarios comply with the official [CommonRoad](https://commonroad.in.tum.de/) format. Each scenario includes a complete driving task, incorporating map information, traffic participants, and traffic signal data imported from the real-world driving dataset [SinD](https://github.com/SOTIF-AVLab/SinD). A small planning benchmark for these scenarios is also released in the paper.
+
+<div style="text-align:center;">
+<img src="assets/scenario_information.png" alt="AnoverviewofSITP" style="width:90%;">
+</div>
 
 - **Hand-crafted scenarios:** [Download here](https://drive.google.com/drive/folders/1g--HQxRF8VNl3f6WRguAq5uaUZV1eCfu?usp=drive_link)
+
+- **Scenario illustration:**
+
+
+<div style="text-align:center;">
+<img src="assets/scenario.png" alt="AnoverviewofSITP" style="width:70%;">
+</div>
 
 
 
@@ -94,7 +107,7 @@ python evaluate.py --dataset-path /path/to/your/dataset/ --models-path /path/to/
 - [x] Introduction & DEMO
 - [x] Hand-crafted scenario
 - [x] Pretrained model
-- [ ] Validation scripts
+- [x] Validation scripts
 - [ ] Data pre-process
 - [ ] Training scripts
 
