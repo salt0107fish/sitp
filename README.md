@@ -1,7 +1,7 @@
-# Strategy-Interactive Trajectory Prediction: Towards Effective Interaction Modeling and Planning Integration
+# Predicting Social-Interactive Trajectories for Better Interaction Modeling and Planning
 [arXiv]() | [paper]() | [website]()\
 This repository is the official implementation of SITP.
-SITP is a novel predictor capable of outputting trajectory prediction results and strategies
+SITP is a novel predictor capable of outputting trajectory prediction results and social preferences.
 
 <div style="text-align:center;">
 <img src="assets/predDEMO.gif" alt="AnoverviewofSITP" style="width:70%;">
