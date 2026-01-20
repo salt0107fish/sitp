@@ -1,5 +1,5 @@
 # Predicting Social-Interactive Trajectories for Better Interaction Modeling and Planning
-[arXiv]() | [paper]() | [website]()\
+[paper]() 
 This repository is the official implementation of SITP.
 SITP is a novel predictor capable of outputting trajectory prediction results and social preferences.
 
@@ -57,11 +57,20 @@ cd datasets
 python preprocess.py
 ```
 
+Data preprocessing may take several hours the first time you run this project. We use single RTX 3060 GPU, one epoch takes about 12 minutes in INTERACTION.
+
+## Training
+
+You can try running SITP with the default parameters. For more details, please refer to process_args.py to modify them.
+
+```
+# For INTERACTION
+python train.py --dataset-path /path/to/your/dataset/ --save-dir /path/to/your/save/dir
+```
 
 ## Validation
 
-Data preprocessing may take several hours the first time you run this project. We use single RTX 3060 GPU, one epoch takes about 12 minutes in INTERACTION.
-
+You can try evaluating SITP with the pretrained model.
 ```
 
 # For INTERACTION
@@ -99,17 +108,3 @@ Results in validation set:
 </div>
 
 
-
-## TODO LIST
-
-- [x] Introduction & DEMO
-- [x] Hand-crafted scenario
-- [x] Pretrained model
-- [x] Validation scripts
-- [x] Data pre-process
-- [ ] Training scripts
-
-
-## Acknowledgements
-
-## Citation
